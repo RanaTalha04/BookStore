@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us | Khawahish Bookstore</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amiri:wght@700&family=Cormorant+Garamond:wght@400&family=Playfair+Display:wght@400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="Assets/Images/icons8-open-book-50.png"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="logo">
+        <img src="Assets/Images/icons8-open-book-50.png" alt="Khawahish Logo" />
+        <span>Khawahish</span>
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="index.html#hero">Home</a></li>
+        <li><a href="index.html#books-section">Books</a></li>
+        <li><a href="index.html#about">About</a></li>
+      </ul>
+
+      <div class="nav-icons">
+        <a href="login.html" title="Login/Sign Up">
+          <img src="Assets/Images/icons8-person-64.png" alt="Login" />
+        </a>
+        <a href="cart.html" title="Cart">
+          <img src="Assets/Images/icons8-fast-cart-64.png" alt="Cart" />
+        </a>
+        <a href="contact.html" title="Contact Us">
+          <img src="Assets/Images/icons8-phone-100.png" alt="Contact" />
+        </a>
+      </div>
+
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+
+    <!-- Contact Page Content -->
+    <section class="contact-page">
+      <h2>Contact Us</h2>
+      <p class="subtitle">
+        We’d love to hear from you! Please fill out the form below.
+      </p>
+
+      <div class="contact-container">
+        <form id="contactForm" class="contact-form">
+          <input type="text" id="name" placeholder="Your Name" required />
+          <input type="email" id="email" placeholder="Your Email" required />
+          <textarea
+            id="message"
+            placeholder="Your Message"
+            rows="5"
+            required
+          ></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+
+        <div class="contact-info">
+          <h3>Get in Touch</h3>
+          <p><strong>Email:</strong> support@khawahishbooks.com</p>
+          <p><strong>Phone:</strong> +92 300 1234567</p>
+          <p><strong>Address:</strong> Lahore, Pakistan</p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2025 Khawahish Bookstore. All rights reserved.</p>
+    </footer>
+
+    <script src="js/index.js"></script>
+  </body>
+</html>
