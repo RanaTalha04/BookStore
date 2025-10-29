@@ -29,22 +29,31 @@ This project is built using **HTML, CSS, and JavaScript** and demonstrates a cle
     │ ├─ Images/ # Images for books, icons, logos
     │
     ├─ css/
-    │ └─ style.css # Stylesheet for the project
+    │ └─ signup.css # Signup Stylesheet for the project
+    | └─ style.css # Stylesheet for the project
     │
     ├─ js/
-    │ └─ index.js # JavaScript for interactive features
+    │ └─ index.js # JavaScript for landing page
+    │ └─ login.js # JavaScript for Login 
+    │ └─ signup.js # JavaScript for Signup    
     │
     ├─ index.html # Main landing page
-    ├─ login.html # Login/Sign Up page
-    ├─ cart.html # Cart page
+    ├─ login.html # Login page
+    ├─ Signup.html # Sign Up page
+    ├─ admin.html # admin page
+    ├─ cashier.html # cashier page
+    ├─ customer.html # customer page
+    ├─ delivery.html # delivery staff page
+    ├─ manager.html # manager page
+    ├─ supplier.html # supplier page
     └─ README.md # Project documentation
 
 ---
 
 ## Technologies Used
 
-- **HTML5** – Structure of the pages  
-- **CSS3** – Styling, layout, and responsive design  
+- **HTML** – Structure of the pages  
+- **CSS** – Styling, layout, and responsive design  
 - **JavaScript** – Interactivity, menu toggle, and button actions  
 - **Google Fonts** – Custom fonts for modern typography  
 
@@ -61,11 +70,7 @@ This project is built using **HTML, CSS, and JavaScript** and demonstrates a cle
 5. Click View Details on books to explore more (can be linked to detailed book pages).
 
 ## 📘 Future Enhancements
-  Dynamic Cart Functionality: Add books to cart and checkout system.
-  Backend Integration: Connect with a database to manage books, users, and orders.
-  User Authentication: Fully functional login/signup with validation.
-  Search and Filter: Filter books by genre, author, or popularity.
-  Animations: Smooth transitions and hover effects for a modern UX.
+Comming soon
   
 ## 👨‍💻 Author
 **Muhammad Talha**  
