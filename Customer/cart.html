@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Cart | Khawahish Bookstore</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../Assets/Images/icons8-open-book-50.png">
+  <link rel="stylesheet" href="../css/cart.css" />
+</head>
+    <body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">
+      <img src="../Assets/Images/icons8-open-book-50.png" alt="Khawahish Logo" />
+      <span>Khawahish</span>
+    </div>
+  </nav>
+
+  <!-- 🔹 Wrap main content -->
+  <main>
+    <section class="cart-section">
+      <h1>Your Cart</h1>
+      <p class="subtitle">Books you have added to your cart</p>
+
+      <div class="cart-container">
+        <table id="cartTable">
+          <thead>
+            <tr>
+              <th>Book Title</th>
+              <th>Price (PKR)</th>
+              <th>Quantity</th>
+              <th>Status</th> 
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="cartBody">
+
+          </tbody>
+        </table>
+
+        <div class="cart-summary">
+          <h3>Total: <span id="totalPrice">0</span> PKR</h3>
+          <button id="checkoutBtn" class="checkout-btn">Checkout</button>
+          <button id="backBtn" class="back-btn">← Back to Store</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Khawahish Bookstore. All rights reserved.</p>
+  </footer>
+
+  <script src="../js/cart.js"></script>
+</body>
+
+</html>

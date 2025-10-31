@@ -105,10 +105,9 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
       }
 
-      // Save logged-in user
       localStorage.setItem("loggedInUser", JSON.stringify(foundUser));
+      console.log(localStorage)
 
-      // Show welcome + redirect
       const name = foundUser.name || foundUser.username || "User";
       showPopup(`Welcome ${name}!`, "success");
 

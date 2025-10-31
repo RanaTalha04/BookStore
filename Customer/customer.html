@@ -1,69 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Customer Dashboard - Khawahish</title>
+  <title>Customer Dashboard | Bookstore</title>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@700&family=Cormorant+Garamond:wght@400&family=Playfair+Display:wght@400&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../Assets/Images/icons8-open-book-50.png">
   <link rel="stylesheet" href="../css/customer.css" />
-  <link rel="icon" type="image/png" href="../Assets/Images/icons8-open-book-50.png" />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet" />
 </head>
 
 <body>
-  <nav class="navbar">
-    <div class="logo">
-      <img src="../Assets/Images/icons8-open-book-50.png" alt="Logo" />
-      <span>Khawahish</span>
+<nav class="navbar">
+  <div class="logo">
+    <img src="../Assets/Images/icons8-open-book-50.png" alt="Khawahish Logo" />
+    <span>Khawahish</span>
+  </div>
+
+  <ul class="nav-links">
+    <li><a href="#hero">Home</a></li>
+    <li><a href="#books-section">Books</a></li>
+    <li><a href="#about">About</a></li>
+  </ul>
+
+  <div class="nav-icons">
+    <a href="cart.html" title="Cart">
+        <img src="../Assets/Images/icons8-fast-cart-64.png" alt="Cart" />
+    </a>
+    <!-- <a href="../contact.html" title="Contact Us">
+        <img src="../Assets/Images/icons8-phone-100.png" alt="Contact" />
+    </a> -->
+    <a href="../login.html" title="Logout">
+        <img src="../Assets/Images/icons8-logout-100.png" alt="Login" />
+    </a>
+  </div>
+
+  <div class="hamburger">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+
+</nav>
+  <header id="hero" class="hero">
+    <div class="hero-content">
+      <h1 class="arabic-title">خواہش</h1>
+      <h2>Khawahish Bookstore</h2>
+      <p>Your gateway to stories, knowledge, and imagination.</p>
     </div>
+  </header>
 
-    <div class="nav-icons">
-      <span id="customerName">Customer</span>
-      <a href="#" id="logoutBtn" title="Logout">
-        <img src="../Assets/Images/icons8-logout-100.png" alt="Logout" />
-      </a>
+  <section id = "books-section" class="books-section">
+    <h2>Featured Books</h2>
+    <p class="subtitle">Explore our collection of classics and modern favorites</p>
+
+    <div class="book-container">
+      <div class="book-container">
+        <div class="book-card">
+          <img src="../Assets/Images/books-stack.jpg" alt="Book 1" />
+          <h3>The Art of Reading</h3>
+          <p>by John Writer</p>
+          <button class="view-btn">Add to Cart</button>
+        </div>
+
+        <div class="book-card">
+  
+        </div>
+        <!-- <div class="book-card">
+          
+        </div>
+
+        <div class="book-card">
+          
+        </div>
+        <div class="book-card">
+          
+        </div>
+
+        <div class="book-card">
+          
+        </div>
+        <div class="book-card">
+          
+        </div>
+
+        <div class="book-card">
+          
+        </div> -->
+
+</div>
+
+  </section>
+  <!-- About Section -->
+  <section id="about" class="about-section">
+    <h2>About Us</h2>
+    <div class="about-content">
+      <img src="../Assets/Images/books-stack.jpg" alt="About Khawahish Bookstore" class="about-img" />
+      <div class="about-text">
+        <p>
+          Welcome to <strong>Khawahish Bookstore</strong> — a haven for book lovers. 
+          Our mission is to connect readers with stories that inspire, educate, and entertain. 
+          From timeless classics to modern masterpieces, we bring you books that spark curiosity 
+          and nurture imagination.
+        </p>
+        <p>
+          Founded in 2025, Khawahish started as a small idea — a wish ("khawahish") to revive 
+          the joy of reading in our community. Today, we continue to grow with our passionate 
+          readers and authors.
+        </p>
+      </div>
     </div>
-  </nav>
+  </section>
 
-  <main class="main">
-    <h1>Welcome, <span id="welcomeName">Customer</span></h1>
-    <p>Browse and add your favorite books to cart.</p>
-
-    <section class="book-list">
-      <div class="book-card">
-        <h3>Harry Potter</h3>
-        <p>Rs 1200</p>
-        <button onclick="addToCart('Harry Potter', 1200)">Add to Cart</button>
-      </div>
-      <div class="book-card">
-        <h3>Atomic Habits</h3>
-        <p>Rs 1500</p>
-        <button onclick="addToCart('Atomic Habits', 1500)">Add to Cart</button>
-      </div>
-      <div class="book-card">
-        <h3>The Alchemist</h3>
-        <p>Rs 900</p>
-        <button onclick="addToCart('The Alchemist', 900)">Add to Cart</button>
-      </div>
-    </section>
-
-    <section class="cart">
-      <h2>Your Cart</h2>
-      <table id="cartTable">
-        <thead>
-          <tr>
-            <th>Book</th>
-            <th>Price</th>
-            <th>Qty</th>
-            <th>Total</th>
-          </tr>
-        </thead>
-        <tbody></tbody>
-      </table>
-
-      <h3>Total: Rs <span id="totalAmount">0</span></h3>
-      <button id="placeOrder">Place Order</button>
-    </section>
-  </main>
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Khawahish Bookstore. All rights reserved.</p>
+  </footer>
 
   <script src="../js/customer.js"></script>
 </body>
