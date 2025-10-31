@@ -3,16 +3,14 @@ document.addEventListener("DOMContentLoaded", () => {
   const navLinks = document.querySelector(".nav-links");
   const getStartedBtn = document.getElementById("getStartedBtn");
   const viewButtons = document.querySelectorAll(".view-btn");
-  const contactForm = document.querySelector("contactForm");
+  const contactForm = document.getElementById("contactForm");
 
-  // ====== Mobile Navbar ======
   if (hamburger && navLinks) {
     hamburger.addEventListener("click", () => {
       navLinks.classList.toggle("active");
       hamburger.classList.toggle("open");
     });
 
-    // Close navbar when a link is clicked (mobile UX improvement)
     navLinks.querySelectorAll("a").forEach((link) => {
       link.addEventListener("click", () => {
         navLinks.classList.remove("active");
@@ -21,14 +19,12 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // ====== "Get Started" Button ======
   if (getStartedBtn) {
     getStartedBtn.addEventListener("click", () => {
       window.location.href = "login.html";
     });
   }
 
-  // ====== "View Details" Buttons ======
   if (viewButtons.length > 0) {
     viewButtons.forEach((button) => {
       button.addEventListener("click", () => {
@@ -37,35 +33,70 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // ====== Contact Form (if present) ======
   if (contactForm) {
     contactForm.addEventListener("submit", (event) => {
       event.preventDefault();
+      clearErrors();
 
       const name = document.getElementById("name").value.trim();
       const email = document.getElementById("email").value.trim();
       const message = document.getElementById("message").value.trim();
 
-      if (!name || !email || !message) {
-        alert("⚠️ Please fill out all fields before submitting.");
-        return;
+      let isValid = true;
+
+      if (name === "") {
+        showError("name", "Please Enter your Name.");
+        isValid = false;
+      } else if (!/^[A-Za-z ]+$/.test(name)) {
+        showError("name", "Name should only contain letters and spaces.");
+        isValid = false;
       }
 
-      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-        alert("⚠️ Please enter a valid email address.");
-        return;
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (email === "") {
+        showError("email", "Please Enter your Email Address.");
+        isValid = false;
+      } else if (!email.match(emailPattern)) {
+        showError("email", "Please Enter a valid Email Address.");
+        isValid = false;
       }
 
-      alert(
-        "✅ Thank you for contacting us, " +
-          name +
-          "! We’ll get back to you soon."
-      );
-      contactForm.reset();
+      if (message === "") {
+        showError("message", "Please Write your Message before Sending.");
+        isValid = false;
+      }
+      if (isValid) {
+        showPopup(`Thank you, ${name}! Your message has been sent successfully.`);
+        contactForm.reset();
+      }
     });
   }
 
-  // ====== Smooth Scrolling for Navbar Links ======
+  function showError(fieldId, message) {
+    const field = document.getElementById(fieldId);
+    let errorDiv = document.getElementById(`${fieldId}Error`);
+
+    if (!errorDiv) {
+      errorDiv = document.createElement("div");
+      errorDiv.id = `${fieldId}Error`;
+      errorDiv.className = "error-message";
+      errorDiv.style.color = "#d9534f";
+      errorDiv.style.fontSize = "0.9rem";
+      errorDiv.style.marginTop = "4px";
+      field.insertAdjacentElement("afterend", errorDiv);
+    }
+
+    errorDiv.textContent = message;
+    field.classList.add("error-input");
+  }
+
+  function clearErrors() {
+    document.querySelectorAll(".error-message").forEach((msg) => msg.remove());
+    document.querySelectorAll(".error-input").forEach((el) =>
+      el.classList.remove("error-input")
+    );
+  }
+
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", function (e) {
       const targetId = this.getAttribute("href");
@@ -78,7 +109,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // ====== Popup Function ======
   function showPopup(message) {
     const popup = document.createElement("div");
     popup.textContent = message;
