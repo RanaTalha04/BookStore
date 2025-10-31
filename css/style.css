@@ -327,6 +327,27 @@ body {
   color: #3b2f2f;
 }
 
+.error-input {
+  border-color: #b35a28 !important; 
+  background-color: #fff5f0;        
+  transition: all 0.3s ease;
+}
+
+.error-message {
+  color: #b35a28;                   
+  font-size: 14px;
+  font-style: italic;
+  margin-top: -6px;
+  margin-bottom: 4px;
+  display: block;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 @media (max-width: 768px) {
   .contact-container {
     flex-direction: column;
