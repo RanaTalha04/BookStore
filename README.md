@@ -10,12 +10,14 @@ This project is built using **HTML, CSS, and JavaScript** and demonstrates a cle
 
 ## Features
 
-- **Responsive Design:** Works smoothly on desktop, tablet, and mobile screens.  
-- **Hero Section:** Attractive landing page introducing the bookstore.  
-- **Featured Books Section:** Showcases selected books with details and view buttons.  
-- **Navigation Bar:** Includes Home, Books, About, Contact links, as well as **Login/Sign Up** and **Cart** icons.  
-- **Footer:** Displays copyright information.  
-- **Interactive Elements:** Buttons and menus are interactive, including a mobile hamburger menu.  
+- **User Authentication:** Login system for multiple roles: Admin, Cashier, Supplier, Delivery Staff, Customer. Role-based dashboard access.
+- **Admin Dashboard:** View basic profile information. Manage users (Add, Delete). Role assignment for Cashier, Supplier, Delivery, etc.  
+- **Cashier Dashboard:** View pending customer orders. Mark orders as accepted/paid.
+- **Supplier Dashboard:** View supply orders and requests. Manage supplied products.
+- **Delivery Staff Dashboard:** View delivery assignments. Mark orders as delivered.
+- **Customer Dashboard:** Browse books with images, title, author, and price. Add books to cart. View cart summary.
+- **Interactive UI:** Responsive design for all devices. Popup notifications for actions (Add/Delete/Accept).
+- **Static Data Implementation:** Admin, Cashier, Supplier, Delivery, and Customer data handled statically in HTML for simplicity.
 
 ---
 
@@ -25,27 +27,42 @@ This project is built using **HTML, CSS, and JavaScript** and demonstrates a cle
     ```bash
     Khawahish-Bookstore/
     │
+    ├─ Admin/
+    │ └─ admin.html # admin page
     ├─ Assets/
-    │ ├─ Images/ # Images for books, icons, logos
+    │ └─ Images/ # Images, icons, logos
+    ├─ Cashier/
+    │ └─ cashier.html # cashier page
+    ├─ Customer/
+    │ └─ customer.html # customer page
+    │ └─ cart.html # cart page
+    ├─ Delivery/
+    │ └─ delivery.html # delivery staff page
+    ├─ Supplier/
+    │ └─ supplier.html # supplier page
     │
     ├─ css/
-    │ └─ signup.css # Signup Stylesheet for the project
-    | └─ style.css # Stylesheet for the project
+    │ └─ signup.css # Signup/login Stylesheet for the project
+    | └─ style.css # Stylesheet for the index and some other html files
+    │ └─ admin.css # Stylesheet for the admin
+    | └─ cart.css # Stylesheet for the carts
+    │ └─ cashier.css # Stylesheet for the cashier
+    | └─ customer.css # Stylesheet for the customer
     │
     ├─ js/
     │ └─ index.js # JavaScript for landing page
     │ └─ login.js # JavaScript for Login 
     │ └─ signup.js # JavaScript for Signup    
+    │ └─ admin.js # JavaScript for Admins
+    │ └─ cart.js # JavaScript for Cart 
+    │ └─ cashier.js # JavaScript for Cashier    
+    │ └─ customer.js # JavaScript for Customer
+    │ └─ delivery.js # JavaScript for Delivery 
+    │ └─ supplier.js # JavaScript for Supplier    
     │
     ├─ index.html # Main landing page
     ├─ login.html # Login page
     ├─ Signup.html # Sign Up page
-    ├─ admin.html # admin page
-    ├─ cashier.html # cashier page
-    ├─ customer.html # customer page
-    ├─ delivery.html # delivery staff page
-    ├─ manager.html # manager page
-    ├─ supplier.html # supplier page
     └─ README.md # Project documentation
 
 ---
