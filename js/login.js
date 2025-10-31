@@ -10,36 +10,36 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (!localStorage.getItem("roles")) {
     localStorage.setItem("roles", JSON.stringify(roles));
-    console.log("✅ Roles initialized in localStorage");
+    console.log("Roles initialized in localStorage");
   }
 
   // ---- Step 2: Default Users for Each Role ----
   const defaultUsers = [
     {
       name: "Muhammad Talha",
-      username: "talha",
+      username: "talhaShahid",
       email: "talha@bookstore.com",
       password: "admin123",
       role: "admin",
     },
     {
-      name: "Ali Raza",
-      username: "ali_cashier",
-      email: "cashier@bookstore.com",
+      name: "Muaaz",
+      username: "maaz_cashier",
+      email: "maaz@cashier.com",
       password: "cashier123",
       role: "cashier",
     },
     {
-      name: "Hassan Khan",
-      username: "hassan_supplier",
-      email: "supplier@bookstore.com",
+      name: "Haider",
+      username: "haider_supplier",
+      email: "haider@supplier.com",
       password: "supplier123",
       role: "supplier",
     },
     {
-      name: "Ahmed Malik",
+      name: "Ahmed",
       username: "ahmed_delivery",
-      email: "delivery@bookstore.com",
+      email: "ahmed@delivery.com",
       password: "delivery123",
       role: "delivery",
     },
@@ -57,7 +57,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (addedUsers > 0) {
     localStorage.setItem("users", JSON.stringify(users));
-    console.log(` ${addedUsers} Default user(s) added.`);
   }
 
   // ---- Step 3: Handle Login ----
@@ -88,7 +87,10 @@ document.addEventListener("DOMContentLoaded", () => {
         showError("passwordError", "Password cannot be empty");
         isValid = false;
       } else if (password.length < 6) {
-        showError("passwordError", "Password must be at least 6 characters long");
+        showError(
+          "passwordError",
+          "Password must be at least 6 characters long"
+        );
         isValid = false;
       }
 
@@ -105,11 +107,10 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
       }
 
-      localStorage.setItem("loggedInUser", JSON.stringify(foundUser));
-      console.log(localStorage)
+      showPopup(`Welcome ${foundUser.name || foundUser.username}!`, "success");
 
-      const name = foundUser.name || foundUser.username || "User";
-      showPopup(`Welcome ${name}!`, "success");
+      // Save logged-in user
+      localStorage.setItem("loggedInUser", JSON.stringify(foundUser));
 
       setTimeout(() => {
         switch (foundUser.role.toLowerCase()) {
@@ -144,11 +145,14 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function clearErrors() {
-    document.querySelectorAll(".error-message").forEach((f) => (f.textContent = ""));
-    document.querySelectorAll("input").forEach((el) => el.classList.remove("error"));
+    document
+      .querySelectorAll(".error-message")
+      .forEach((f) => (f.textContent = ""));
+    document
+      .querySelectorAll("input")
+      .forEach((el) => el.classList.remove("error"));
   }
 
-  // ---- Popup ----
   function showPopup(message, type = "info") {
     const popup = document.createElement("div");
     popup.textContent = message;
@@ -156,8 +160,7 @@ document.addEventListener("DOMContentLoaded", () => {
     popup.style.bottom = "25px";
     popup.style.left = "50%";
     popup.style.transform = "translateX(-50%)";
-    popup.style.background =
-      type === "success" ? "#7b4a2d" : type === "error" ? "#b33a3a" : "#555";
+    popup.style.background = type === "error" ? "#b33a3a" : "#7b4a2d"; // red for error, brown otherwise
     popup.style.color = "#fffdfa";
     popup.style.padding = "0.8rem 1.5rem";
     popup.style.borderRadius = "8px";
