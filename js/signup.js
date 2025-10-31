@@ -46,76 +46,70 @@ document.getElementById("signupForm").addEventListener("submit", function (e) {
     isValid = false;
   }
 
-  // --- If Valid ---
-  if (isValid) {
-    const users = JSON.parse(localStorage.getItem("users")) || [];
+  if (!isValid) return;
 
-    // Prevent duplicate registration
-    if (users.some(u => u.email === email)) {
-      showError("emailError", "Email already exists");
-      return false;
-    }
+  // --- Save User to Local Storage ---
+  let users = JSON.parse(localStorage.getItem("users")) || [];
 
-    // Create new customer account
-    const newUser = {
-      fullname,
-      email,
-      password,
-      role: "customer"
-    };
-
-    users.push(newUser);
-    localStorage.setItem("users", JSON.stringify(users));
-
-    showPopup(`Account Created Successully.`);
-    document.getElementById("signupForm").reset();
-
-    setTimeout(() => {
-      window.location.href = "login.html";
-    }, 1000);
+  if (users.some(u => u.email === email)) {
+    showError("emailError", "Email already exists");
+    return;
   }
+
+  const newUser = {
+    name: fullname,
+    username: fullname.replace(/\s+/g, '').toLowerCase(),
+    email: email,
+    password: password,
+    role: "customer"
+  };
+
+  users.push(newUser);
+  localStorage.setItem("users", JSON.stringify(users));
+
+  showPopup("Account created successfully!");
+  document.getElementById("signupForm").reset();
+
+  setTimeout(() => {
+    window.location.href = "login.html";
+  }, 1000);
 });
 
 // ---- Helper Functions ----
 function showError(errorId, message) {
   const errorDiv = document.getElementById(errorId);
   errorDiv.textContent = message;
-
   const relatedInput = errorDiv.previousElementSibling;
   if (relatedInput) relatedInput.classList.add("error");
 }
 
 function clearErrors() {
-  document
-    .querySelectorAll(".error-message")
-    .forEach((field) => (field.textContent = ""));
-  document
-    .querySelectorAll("input, select")
-    .forEach((el) => el.classList.remove("error"));
+  document.querySelectorAll(".error-message").forEach(field => field.textContent = "");
+  document.querySelectorAll("input, select").forEach(el => el.classList.remove("error"));
 }
 
-  function showPopup(message) {
-    const popup = document.createElement("div");
-    popup.textContent = message;
-    popup.style.position = "fixed";
-    popup.style.bottom = "25px";
-    popup.style.left = "50%";
-    popup.style.transform = "translateX(-50%)";
-    popup.style.background = "#7b4a2d";
-    popup.style.color = "#fffdfa";
-    popup.style.padding = "0.8rem 1.5rem";
-    popup.style.borderRadius = "8px";
-    popup.style.fontFamily = "'Cormorant Garamond', serif";
-    popup.style.fontSize = "1rem";
-    popup.style.boxShadow = "0 2px 8px rgba(0,0,0,0.2)";
-    popup.style.zIndex = "9999";
-    popup.style.opacity = "0";
-    popup.style.transition = "opacity 0.3s ease";
+function showPopup(message) {
+  const popup = document.createElement("div");
+  popup.textContent = message;
+  popup.style.position = "fixed";
+  popup.style.bottom = "25px";
+  popup.style.left = "50%";
+  popup.style.transform = "translateX(-50%)";
+  popup.style.background = "#7b4a2d";
+  popup.style.color = "#fffdfa";
+  popup.style.padding = "0.8rem 1.5rem";
+  popup.style.borderRadius = "8px";
+  popup.style.fontFamily = "'Cormorant Garamond', serif";
+  popup.style.fontSize = "1rem";
+  popup.style.boxShadow = "0 2px 8px rgba(0,0,0,0.2)";
+  popup.style.zIndex = "9999";
+  popup.style.opacity = "0";
+  popup.style.transition = "opacity 0.3s ease";
 
-    document.body.appendChild(popup);
-    setTimeout(() => (popup.style.opacity = "1"), 100);
-    setTimeout(() => {
-      popup.style.opacity = "0";
-      setTimeout(() => popup.remove(), 500);
-    }, 2000);
-  }
+  document.body.appendChild(popup);
+  setTimeout(() => popup.style.opacity = "1", 100);
+  setTimeout(() => {
+    popup.style.opacity = "0";
+    setTimeout(() => popup.remove(), 500);
+  }, 2000);
+}
