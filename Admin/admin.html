@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard - Khawahish</title>
+  <link rel="stylesheet" href="../css/admin.css" />
+  <link rel="icon" type="image/png" href="../Assets/Images/icons8-open-book-50.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">
+      <img src="../Assets/Images/icons8-open-book-50.png" alt="Logo" />
+      <span>Khawahish</span>
+    </div>
+    <div class="nav-icons">
+      <span id="adminName">Admin</span>
+      <a href="../login.html" id="logoutBtn">
+        <img src="../Assets/Images/icons8-logout-100.png" alt="Logout" />
+      </a>
+    </div>
+  </nav>
+
+  <main class="main">
+    <h1>Admin Dashboard</h1>
+    <p>Manage users and books.</p>
+
+    <section id="usersSection">
+    <h2>Users</h2>
+    <button id="addUserBtn">Add User</button>
+    <table id="usersTable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Username</th>
+          <th>Email</th>
+          <th>Role</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Muhammad Talha</td>
+          <td>talhaShahid</td>
+          <td>admin@bookstore.com</td>
+          <td>Admin</td>
+          <td><button class="delete-btn">Delete</button></td>
+        </tr>
+        <tr>
+          <td>Muaaz</td>
+          <td>maaz_cashier</td>
+          <td>maaz@cashier.com</td>
+          <td>Cashier</td>
+          <td><button class="delete-btn">Delete</button></td>
+        </tr>
+        <tr>
+          <td>Haider</td>
+          <td>haider_supplier</td>
+          <td>haider@supplier.com</td>
+          <td>Supplier</td>
+          <td><button class="delete-btn">Delete</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  </main>
+
+  <script src="../js/admin.js"></script>
+</body>
+</html>
