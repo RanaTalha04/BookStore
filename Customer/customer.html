@@ -11,37 +11,31 @@
 </head>
 
 <body>
-<nav class="navbar">
-  <div class="logo">
-    <img src="../Assets/Images/icons8-open-book-50.png" alt="Khawahish Logo" />
-    <span>Khawahish</span>
-  </div>
-
-  <ul class="nav-links">
-    <li><a href="#hero">Home</a></li>
-    <li><a href="#books-section">Books</a></li>
-    <li><a href="#about">About</a></li>
-  </ul>
-
-  <div class="nav-icons">
-    <a href="cart.html" title="Cart">
+  <nav class="navbar">
+    <div class="logo">
+      <img src="../Assets/Images/icons8-open-book-50.png" alt="Khawahish Logo" />
+      <span>Khawahish</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#books-section">Books</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+    <div class="nav-icons">
+      <a href="cart.html" title="Cart">
         <img src="../Assets/Images/icons8-fast-cart-64.png" alt="Cart" />
-    </a>
-    <!-- <a href="../contact.html" title="Contact Us">
-        <img src="../Assets/Images/icons8-phone-100.png" alt="Contact" />
-    </a> -->
-    <a href="../login.html" title="Logout">
+      </a>
+      <a href="../login.html" title="Logout">
         <img src="../Assets/Images/icons8-logout-100.png" alt="Login" />
-    </a>
-  </div>
+      </a>
+    </div>
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
 
-  <div class="hamburger">
-  <span></span>
-  <span></span>
-  <span></span>
-</div>
-
-</nav>
   <header id="hero" class="hero">
     <div class="hero-content">
       <h1 class="arabic-title">خواہش</h1>
@@ -50,48 +44,61 @@
     </div>
   </header>
 
-  <section id = "books-section" class="books-section">
+  <section id="books-section" class="books-section">
     <h2>Featured Books</h2>
     <p class="subtitle">Explore our collection of classics and modern favorites</p>
 
     <div class="book-container">
-      <div class="book-container">
-        <div class="book-card">
-          <img src="../Assets/Images/books-stack.jpg" alt="Book 1" />
-          <h3>The Art of Reading</h3>
-          <p>by John Writer</p>
-          <button class="view-btn">Add to Cart</button>
-        </div>
+      <!-- Dummy books directly in HTML -->
+      <div class="book-card">
+        <img src="../Assets/Images/books-stack.jpg" alt="The Art of Reading" />
+        <h3>The Art of Reading</h3>
+        <p>by John Writer</p>
+        <p class="price">Price: 1200 PKR</p>
+        <button class="add-btn">Add to Cart</button>
+      </div>
 
-        <div class="book-card">
-  
-        </div>
-        <!-- <div class="book-card">
-          
-        </div>
+      <div class="book-card">
+        <img src="../Assets/Images/books-stack.jpg" alt="Stories Untold" />
+        <h3>Stories Untold</h3>
+        <p>by Sarah Page</p>
+        <p class="price">Price: 950 PKR</p>
+        <button class="add-btn">Add to Cart</button>
+      </div>
 
-        <div class="book-card">
-          
-        </div>
-        <div class="book-card">
-          
-        </div>
+      <div class="book-card">
+        <img src="../Assets/Images/books-stack.jpg" alt="Winds of Time" />
+        <h3>Winds of Time</h3>
+        <p>by Aiman Tariq</p>
+        <p class="price">Price: 1500 PKR</p>
+        <button class="add-btn">Add to Cart</button>
+      </div>
+      <div class="book-card">
+        <img src="../Assets/Images/books-stack.jpg" alt="The Art of Reading" />
+        <h3>The Art of Reading</h3>
+        <p>by John Writer</p>
+        <p class="price">Price: 1200 PKR</p>
+        <button class="add-btn">Add to Cart</button>
+      </div>
 
-        <div class="book-card">
-          
-        </div>
-        <div class="book-card">
-          
-        </div>
+      <div class="book-card">
+        <img src="../Assets/Images/books-stack.jpg" alt="Stories Untold" />
+        <h3>Stories Untold</h3>
+        <p>by Sarah Page</p>
+        <p class="price">Price: 950 PKR</p>
+        <button class="add-btn">Add to Cart</button>
+      </div>
 
-        <div class="book-card">
-          
-        </div> -->
-
-</div>
-
+      <div class="book-card">
+        <img src="../Assets/Images/books-stack.jpg" alt="Winds of Time" />
+        <h3>Winds of Time</h3>
+        <p>by Aiman Tariq</p>
+        <p class="price">Price: 1500 PKR</p>
+        <button class="add-btn">Add to Cart</button>
+      </div>
+    </div>
   </section>
-  <!-- About Section -->
+
   <section id="about" class="about-section">
     <h2>About Us</h2>
     <div class="about-content">
@@ -99,20 +106,16 @@
       <div class="about-text">
         <p>
           Welcome to <strong>Khawahish Bookstore</strong> — a haven for book lovers. 
-          Our mission is to connect readers with stories that inspire, educate, and entertain. 
-          From timeless classics to modern masterpieces, we bring you books that spark curiosity 
-          and nurture imagination.
+          Our mission is to connect readers with stories that inspire, educate, and entertain.
         </p>
         <p>
           Founded in 2025, Khawahish started as a small idea — a wish ("khawahish") to revive 
-          the joy of reading in our community. Today, we continue to grow with our passionate 
-          readers and authors.
+          the joy of reading in our community.
         </p>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
   <footer>
     <p>© 2025 Khawahish Bookstore. All rights reserved.</p>
   </footer>
