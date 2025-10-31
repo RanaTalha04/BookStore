@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cashier Dashboard - Khawahish</title>
+  <link rel="stylesheet" href="../css/cashier.css" />
+  <link rel="icon" type="image/png" href="../Assets/Images/icons8-open-book-50.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="logo">
+      <img src="../Assets/Images/icons8-open-book-50.png" alt="Logo" />
+      <span>Khawahish</span>
+    </div>
+    <div class="nav-icons">
+      <span id="cashierName">Cashier</span>
+      <a href="#" id="logoutBtn">
+        <img src="../Assets/Images/icons8-logout-100.png" alt="Logout" />
+      </a>
+    </div>
+  </nav>
+
+  <main class="main">
+    <h1>Pending Orders</h1>
+    <p>Checkout customer carts and mark as paid.</p>
+
+    <table id="ordersTable">
+      <thead>
+        <tr>
+          <th>Order ID</th>
+          <th>Customer</th>
+          <th>Items</th>
+          <th>Total</th>
+          <th>Status</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </main>
+
+  <script src="../js/cashier.js"></script>
+</body>
+</html>
