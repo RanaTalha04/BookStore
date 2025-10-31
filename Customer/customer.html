@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Customer Dashboard - Khawahish</title>
+  <link rel="stylesheet" href="../css/customer.css" />
+  <link rel="icon" type="image/png" href="../Assets/Images/icons8-open-book-50.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="logo">
+      <img src="../Assets/Images/icons8-open-book-50.png" alt="Logo" />
+      <span>Khawahish</span>
+    </div>
+
+    <div class="nav-icons">
+      <span id="customerName">Customer</span>
+      <a href="#" id="logoutBtn" title="Logout">
+        <img src="../Assets/Images/icons8-logout-100.png" alt="Logout" />
+      </a>
+    </div>
+  </nav>
+
+  <main class="main">
+    <h1>Welcome, <span id="welcomeName">Customer</span></h1>
+    <p>Browse and add your favorite books to cart.</p>
+
+    <section class="book-list">
+      <div class="book-card">
+        <h3>Harry Potter</h3>
+        <p>Rs 1200</p>
+        <button onclick="addToCart('Harry Potter', 1200)">Add to Cart</button>
+      </div>
+      <div class="book-card">
+        <h3>Atomic Habits</h3>
+        <p>Rs 1500</p>
+        <button onclick="addToCart('Atomic Habits', 1500)">Add to Cart</button>
+      </div>
+      <div class="book-card">
+        <h3>The Alchemist</h3>
+        <p>Rs 900</p>
+        <button onclick="addToCart('The Alchemist', 900)">Add to Cart</button>
+      </div>
+    </section>
+
+    <section class="cart">
+      <h2>Your Cart</h2>
+      <table id="cartTable">
+        <thead>
+          <tr>
+            <th>Book</th>
+            <th>Price</th>
+            <th>Qty</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+
+      <h3>Total: Rs <span id="totalAmount">0</span></h3>
+      <button id="placeOrder">Place Order</button>
+    </section>
+  </main>
+
+  <script src="../js/customer.js"></script>
+</body>
+</html>
