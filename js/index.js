@@ -131,7 +131,7 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => (popup.style.opacity = "1"), 100);
     setTimeout(() => {
       popup.style.opacity = "0";
-      setTimeout(() => popup.remove(), 300);
+      setTimeout(() => popup.remove(), 500);
     }, 2000);
   }
 });

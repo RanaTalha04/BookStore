@@ -5,11 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Create Account - Book Store</title>
     <link
-      href="https://fonts.googleapis.com/css2?family=Ciguatera&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/signup.css" />
-    <link rel="icon" type="image/png" href="Assets/Images/icons8-open-book-50.png"
+    <link
+      rel="icon"
+      type="image/png"
+      href="Assets/Images/icons8-open-book-50.png"
     />
   </head>
 
@@ -20,17 +23,20 @@
           <img src="Assets/Images/icons8-open-book-50.png" alt="Book Icon" />
         </div>
         <h1>Create Account</h1>
-        <p class="subtitle">Sign up for a new account</p>
+        <p class="subtitle">Sign up for a new customer account</p>
 
         <form id="signupForm">
+          <!-- Full Name -->
           <label for="fullname">Full Name</label>
           <input type="text" id="fullname" placeholder="Enter your name" />
           <div id="nameError" class="error-message"></div>
 
+          <!-- Email -->
           <label for="email">Email</label>
           <input type="text" id="email" placeholder="Enter your email" />
           <div id="emailError" class="error-message"></div>
 
+          <!-- Password -->
           <label for="password">Password</label>
           <input
             type="password"
@@ -39,16 +45,14 @@
           />
           <div id="passwordError" class="error-message"></div>
 
-          <label for="role">Select Role</label>
-          <select id="role">
-            <option value="">Select Role</option>
-            <option value="admin">Admin</option>
-            <option value="cashier">Cashier</option>
-            <option value="customer">Customer</option>
-            <option value="supplier">Supplier</option>
-            <option value="delivery">Delivery Staff</option>
-          </select>
-          <div id="roleError" class="error-message"></div>
+          <!-- Confirm Password -->
+          <label for="confirmPassword">Confirm Password</label>
+          <input
+            type="password"
+            id="confirmPassword"
+            placeholder="Confirm your password"
+          />
+          <div id="confirmError" class="error-message"></div>
 
           <button type="submit">Sign Up</button>
         </form>
