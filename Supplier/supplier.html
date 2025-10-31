@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Supplier Dashboard - Khawahish</title>
+  <link rel="stylesheet" href="../css/cashier.css" />
+  <link rel="icon" type="image/png" href="../Assets/Images/icons8-open-book-50.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="logo">
+      <img src="../Assets/Images/icons8-open-book-50.png" alt="Logo" />
+      <span>Khawahish</span>
+    </div>
+    <div class="nav-icons">
+      <span id="supplierName">Supplier</span>
+      <a href="../login.html" id="logoutBtn">
+        <img src="../Assets/Images/icons8-logout-100.png" alt="Logout" />
+      </a>
+    </div>
+  </nav>
+
+  <main class="main">
+    <h1>Supplied Books</h1>
+    <p>View your supplied books and update their stock quantity.</p>
+
+    <table id="supplierTable">
+      <thead>
+        <tr>
+          <th>Book ID</th>
+          <th>Title</th>
+          <th>Author</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>The Art of Reading</td>
+          <td>John Writer</td>
+          <td>1200 PKR</td>
+          <td>10</td>
+          <td><button class="update-btn">Update Stock</button></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Stories Untold</td>
+          <td>Sarah Page</td>
+          <td>950 PKR</td>
+          <td>15</td>
+          <td><button class="update-btn">Update Stock</button></td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Winds of Time</td>
+          <td>Aiman Tariq</td>
+          <td>1500 PKR</td>
+          <td>8</td>
+          <td><button class="update-btn">Update Stock</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+
+  <script src="../js/supplier.js"></script>
+</body>
+</html>
