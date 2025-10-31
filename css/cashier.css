@@ -87,10 +87,23 @@ body {
 }
 
 /* Main Section */
+.main h1,
+.main p {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
 table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 1rem;
+}
+
+table thead th {
+  background-color: #7b4a2d;
+  color: #fffdfa;
+  padding: 0.8rem;
+  text-align: center;
 }
 
 th, td {
