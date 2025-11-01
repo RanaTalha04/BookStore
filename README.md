@@ -93,8 +93,5 @@ Comming soon
 **Muhammad Talha**  
 Final-year Computer Science student at UET Lahore  
 
-📫 [Email](mailto:muhammadtalhashahid2005@gmail.com)  
-🌐 [Portfolio](https://talhashahid.netlify.app)  
-💼 [LinkedIn](https://www.linkedin.com/in/muhammadtaalhaa/)  
-💻 [GitHub](https://github.com/RanaTalha04)
+📫 [Email](mailto:muhammadtalhashahid2005@gmail.com) 🌐 [Portfolio](https://talhashahid.netlify.app) 💼 [LinkedIn](https://www.linkedin.com/in/muhammadtaalhaa/) 💻 [GitHub](https://github.com/RanaTalha04)
 
