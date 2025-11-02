@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Profile | Khawahish Bookstore</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amiri:wght@700&family=Cormorant+Garamond:wght@400&family=Playfair+Display:wght@400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="../Assets/Images/icons8-open-book-50.png"
+    />
+    <link rel="stylesheet" href="../css/cashier.css" />
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <div class="logo">
+        <img
+          src="../Assets/Images/icons8-open-book-50.png"
+          alt="Khawahish Logo"
+        />
+        <span>Khawahish</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="cashier.html">Home</a></li>
+      </ul>
+      <div class="nav-icons">
+        <div class="profile-container">
+          <img
+            src="../Assets/Images/icons8-person-64.png"
+            alt="Profile"
+            class="profile-icon"
+            title="Profile"
+          />
+          <div class="profile-dropdown">
+            <a href="profile.html" class="dropdown-item">My Account</a>
+            <a href="email.html" class="dropdown-item">Email</a>
+            <a href="security.html" class="dropdown-item">Security</a>
+            <a href="#" class="dropdown-item" id="logout">Logout</a>
+          </div>
+        </div>
+      </div>
+      <div class="hamburger">
+        <span></span>
+      </div>
+    </nav>
+
+    <section class="profile-section">
+      <div class="profile-container">
+        <h1>My Profile</h1>
+        <div class="profile-content">
+          <div class="profile-picture-section">
+            <div class="profile-picture">
+              <img
+                id="profileImg"
+                src="../Assets/Images/icons8-person-64.png"
+                alt="Profile Picture"
+              />
+            </div>
+            <input
+              type="file"
+              id="profilePicInput"
+              accept="image/*"
+              style="display: none"
+            />
+            <button id="uploadBtn" class="upload-btn">Upload Picture</button>
+          </div>
+          <div class="profile-details">
+            <div class="detail-item">
+              <label>Name:</label>
+              <span id="userName"></span>
+            </div>
+            <div class="detail-item">
+              <label>Email:</label>
+              <span id="userEmail"></span>
+            </div>
+            <div class="detail-item">
+              <label>Role:</label>
+              <span id="userRole"></span>
+            </div>
+            <div class="detail-item">
+              <label>Username:</label>
+              <span id="userUsername"></span>
+            </div>
+          </div>
+        </div>
+        <div class="profile-actions">
+          <a href="email.html" class="action-btn">Manage Email</a>
+          <a href="security.html" class="action-btn">Change Password</a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2025 Khawahish Bookstore. All rights reserved.</p>
+    </footer>
+
+    <script src="../js/profile.js"></script>
+  </body>
+</html>
