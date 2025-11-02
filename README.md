@@ -36,6 +36,9 @@ This project is built using **HTML, CSS, and JavaScript** and demonstrates a cle
     ├─ Customer/
     │ └─ customer.html # customer page
     │ └─ cart.html # cart page
+    │ └─ email.html # email page
+    │ └─ profile.html # profile page
+    │ └─ security.html # security page
     ├─ Delivery/
     │ └─ delivery.html # delivery staff page
     ├─ Supplier/
@@ -59,10 +62,16 @@ This project is built using **HTML, CSS, and JavaScript** and demonstrates a cle
     │ └─ customer.js # JavaScript for Customer
     │ └─ delivery.js # JavaScript for Delivery 
     │ └─ supplier.js # JavaScript for Supplier    
+    │ └─ email.js # JavaScript for Email Handling    
+    │ └─ forgot-password.js # JavaScript for Forget Password    
+    │ └─ security.js # JavaScript for Security  
+    │ └─ profile.js # JavaScript for Profile
     │
     ├─ index.html # Main landing page
     ├─ login.html # Login page
     ├─ Signup.html # Sign Up page
+    ├─ Contact.html # Contact us page
+    ├─ forget-password.html # forget-passwords page
     └─ README.md # Project documentation
 
 ---
